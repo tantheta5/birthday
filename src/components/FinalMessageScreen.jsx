@@ -56,11 +56,11 @@ const FinalMessageScreen = ({ onReset }) => {
           {/* Subtle warm glow inside card */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#e3c283]/10 to-transparent pointer-events-none rounded-xl"></div>
           
-          <img src="/airang.png" alt="Airang" className="w-48 md:w-64 h-auto object-contain mb-8 drop-shadow-xl z-10" />
+          <img src="airang.png" alt="Airang" className="w-48 md:w-64 h-auto object-contain mb-8 drop-shadow-xl z-10" />
           
           <div className="text-xl text-[#fdfbf6] font-serif mb-8 leading-snug drop-shadow-md z-10 px-2 tracking-wide font-medium flex flex-col items-center">
             <span className="mb-2">Hope your day is as golden as the golden maknae himself. Keep shining brightly,</span>
-            <img src="/aashni.png" alt="Aashni" className="h-16 md:h-20 w-auto object-contain drop-shadow-md mb-2 mt-4" />
+            <img src="aashni.png" alt="Aashni" className="h-16 md:h-20 w-auto object-contain drop-shadow-md mb-2 mt-4" />
             <span className="mb-6">💜🐰✨</span>
 
             <div className="text-base md:text-lg text-[#e1caa1] font-sans leading-relaxed tracking-normal max-w-sm mt-4 italic opacity-90 border-t border-[#e3c283]/30 pt-6">

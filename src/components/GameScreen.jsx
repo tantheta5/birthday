@@ -115,7 +115,7 @@ const GameScreen = ({ onNext }) => {
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         className="mb-4"
       >
-        <img src="/aashni.png" alt="Aashni" className="h-20 md:h-28 w-auto object-contain drop-shadow-lg mx-auto" />
+        <img src="aashni.png" alt="Aashni" className="h-20 md:h-28 w-auto object-contain drop-shadow-lg mx-auto" />
       </motion.div>
 
       {/* Blurred glass box containing all game elements */}

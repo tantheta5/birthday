@@ -44,7 +44,7 @@ const GiftScreen = ({ onNext }) => {
       )}
 
       <div className="flex flex-col items-center mb-6">
-        <img src="/aashni.png" alt="Aashni" className="h-32 md:h-40 w-auto object-contain mb-4 drop-shadow-lg" />
+        <img src="aashni.png" alt="Aashni" className="h-32 md:h-40 w-auto object-contain mb-4 drop-shadow-lg" />
         <h1 className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 drop-shadow-md text-center px-4">
           You unlocked it! Tap the gift for your reward.
         </h1>

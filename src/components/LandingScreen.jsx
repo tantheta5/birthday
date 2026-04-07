@@ -14,7 +14,7 @@ const LandingScreen = ({ onNext }) => {
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         className="mb-8"
       >
-        <img src="/aashni.png" alt="Aashni" className="h-32 md:h-48 w-auto object-contain drop-shadow-lg mx-auto" />
+        <img src="aashni.png" alt="Aashni" className="h-32 md:h-48 w-auto object-contain drop-shadow-lg mx-auto" />
       </motion.div>
       <h1 className="text-3xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-300 to-purple-300 drop-shadow-sm flex flex-col items-center gap-2">
         <span>Ready for a birthday challenge?</span>
