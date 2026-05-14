@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>game</title>
+    <title>Minimal File Upload UI</title>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <main class="container">
+      <h1>Upload Sample Program</h1>
+      <p class="subtitle">Please upload your <code>sample_program.txt</code> file below.</p>
+
+      <div class="upload-box">
+        <form action="#" method="post" enctype="multipart/form-data">
+          <label for="file-upload" class="custom-file-upload">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="upload-icon">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            Choose File
+          </label>
+          <input id="file-upload" type="file" name="sample_program" accept=".txt" />
+          <div class="file-hint">Accepts .txt files</div>
+
+          <button type="submit" class="submit-btn">Upload</button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
