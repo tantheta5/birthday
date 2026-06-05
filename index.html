@@ -1,13 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>game</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <title>Upload Program</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .upload-card {
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #222;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .file-upload-wrapper {
+            margin-bottom: 1.5rem;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .custom-file-upload {
+            border: 2px dashed #d1d5db;
+            display: block;
+            padding: 2rem 1rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            color: #4b5563;
+            background-color: #f9fafb;
+            font-weight: 500;
+        }
+
+        .custom-file-upload:hover {
+            border-color: #9ca3af;
+            background-color: #f3f4f6;
+        }
+
+        button[type="submit"] {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1d4ed8;
+        }
+
+        button[type="submit"]:active {
+            background-color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="upload-card">
+        <h1>Upload Program</h1>
+        <p>Please select your <strong>sample_program.txt</strong> file to upload.</p>
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="file-upload-wrapper">
+                <label for="file-upload" class="custom-file-upload">
+                    Click to browse files (.txt)
+                </label>
+                <input id="file-upload" type="file" name="programFile" accept=".txt" required />
+            </div>
+
+            <button type="submit">Upload File</button>
+        </form>
+    </div>
+
+</body>
 </html>
