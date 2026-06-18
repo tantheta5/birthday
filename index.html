@@ -2,12 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>game</title>
+    <title>Upload File</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+      h1 {
+        margin-top: 0;
+        font-size: 1.5rem;
+      }
+      .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        margin-top: 1rem;
+      }
+      .btn {
+        border: 2px solid #007bff;
+        color: #007bff;
+        background-color: transparent;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .btn:hover {
+        background-color: #007bff;
+        color: white;
+      }
+      .upload-btn-wrapper input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="container">
+      <h1>Upload Program</h1>
+      <p>Please select your <strong>sample_program.txt</strong> file.</p>
+      <div class="upload-btn-wrapper">
+        <button class="btn">Choose File</button>
+        <input type="file" name="myfile" accept=".txt" />
+      </div>
+    </div>
   </body>
 </html>
