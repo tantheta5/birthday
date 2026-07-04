@@ -2,12 +2,91 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>game</title>
+    <title>Upload Program</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background-color: #f9fafb;
+        color: #111827;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background: white;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+      .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+      }
+      .btn {
+        border: 1px solid #d1d5db;
+        color: #374151;
+        background-color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn:hover {
+        background-color: #f3f4f6;
+      }
+      .upload-btn-wrapper input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+        height: 100%;
+      }
+      .submit-btn {
+        background-color: #2563eb;
+        color: white;
+        border-color: #2563eb;
+        margin-top: 1.5rem;
+        width: 100%;
+      }
+      .submit-btn:hover {
+        background-color: #1d4ed8;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="container">
+      <h1>Upload File</h1>
+      <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1.5rem;">
+        Please upload your sample_program.txt file.
+      </p>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="upload-btn-wrapper">
+          <button class="btn" type="button">Choose File</button>
+          <input type="file" name="sample_program" accept=".txt" required />
+        </div>
+        <div>
+          <button type="submit" class="btn submit-btn">
+            Upload
+          </button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
