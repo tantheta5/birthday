@@ -1,13 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>game</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Program</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <h1>Upload Program</h1>
+            <p>Select your sample_program.txt file to continue.</p>
+
+            <form class="upload-form" action="/" method="POST" enctype="multipart/form-data">
+                <div class="file-input-wrapper">
+                    <input type="file" name="programFile" id="programFile" accept=".txt" class="file-input" required>
+                    <label for="programFile" class="file-label">
+                        <span class="file-icon">📄</span>
+                        <span class="file-text">Choose file</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Upload</button>
+            </form>
+        </div>
+    </main>
+</body>
 </html>
